@@ -7,13 +7,21 @@ exports.updateTodo = async (req,res)=>{
         const {title,description} = req.body;
         const todo = await Todo.findByIdAndUpdate(
             {_id:id},
-            {title,description,updatedAt:Date.now()}
+            {title,description,updatedAt:Date.now()},
+         
         )
-        req.status(200).jsom({
-            success:true,
-            data:todo,
-            message:"todo updated succesfully"
-        })
+        if (!todo) {
+            return res.status(404).json({
+                success: false,
+                message: "Todo not found",
+            });
+        }
+
+        res.status(200).json({
+            success: true,
+            data: todo,
+            message: "Todo updated successfully",
+        });
 
         }
     catch(err){

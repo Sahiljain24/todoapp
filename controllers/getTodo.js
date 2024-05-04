@@ -3,7 +3,7 @@ const Todo = require("../models/Todo");
 exports.getTodo=async (req,res)=>{
 
       try{
-       const todos= Todo.find({});
+       const todos= await Todo.find({});
 
        res.status(200).json(
         {
@@ -29,7 +29,7 @@ exports.getTodo=async (req,res)=>{
 
 exports.getTodoById =async (req,res)=>{
     try{
-        const id = req.param.id;
+        const id = req.params.id;
         const todo = await Todo.findById({_id:id});
         if(!todo){
             res.status(404).json({

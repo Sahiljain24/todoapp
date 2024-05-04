@@ -5,7 +5,7 @@ exports.createTodo =async(req,res)=>{
     try{
         const {title,description} = req.body;
 
-        const response = await todo.create({title,description});
+        const response = await Todo.create({title,description});
     res.status(200).json(
 
     {success:true,
