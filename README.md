@@ -13,7 +13,7 @@ Installation
 Clone the repository:
 bash
 Copy code
-git clone [https://github.com/your-username/todoapp-backend](https://github.com/Sahiljain24/todoapp.git
+git clone  https://github.com/Sahiljain24/todoapp.git
 Install dependencies:
 bash
 Copy code
