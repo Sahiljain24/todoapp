@@ -24,7 +24,7 @@ plaintext
 Copy code
 PORT=3000
 MONGODB_URI=your-mongodb-connection-string
-JWT_SECRET=your-jwt-secret
+ 
 Run the server:
 bash
 Copy code
