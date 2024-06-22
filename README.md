@@ -10,7 +10,7 @@ Tested with Postman.
 Monitor database with MongoDB Compass.
 
 Installation
-Clone the repository:
+Clone the repository:-
 bash
 Copy code
 git clone  https://github.com/Sahiljain24/todoapp.git
